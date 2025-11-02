@@ -1,15 +1,13 @@
-/* ==== GLOBAL STYLE ==== */
 body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background: url("grave-of-the-fireflies-outside-pond-at-night.jpg") no-repeat center center fixed;
+  background: url("Images/grave-of-the-fireflies-outside-pond-at-night.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   overflow-x: hidden;
 }
 
-/* ==== HEADER ==== */
 header {
   text-align: center;
   padding: 100px 20px 40px;
@@ -32,7 +30,6 @@ header h1 {
   box-shadow: 0 0 20px rgba(255, 255, 150, 0.6);
 }
 
-/* ==== BOX ==== */
 .box {
   background: rgba(0, 0, 0, 0.7);
   border-radius: 12px;
@@ -51,7 +48,6 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* ==== INSPIRATION ==== */
 .inspiration-section {
   background: rgba(0, 0, 0, 0.6);
   text-align: center;
@@ -67,13 +63,11 @@ h2 {
   text-decoration: none;
 }
 
-/* ==== CONTACT ==== */
 .contact a {
   color: #ffeb70;
   text-decoration: none;
 }
 
-/* ==== FOOTER ==== */
 footer {
   text-align: center;
   padding: 20px;
@@ -82,7 +76,6 @@ footer {
   color: #ccc;
 }
 
-/* ==== FIREFLIES ==== */
 .fireflies {
   position: fixed;
   top: 0;
@@ -106,7 +99,6 @@ footer {
   animation: fly 20s linear infinite, glow 2s ease-in-out infinite alternate;
 }
 
-/* === RANDOMIZE POSITION + SPEED === */
 .fireflies span:nth-child(odd) {
   width: 8px;
   height: 8px;
@@ -119,7 +111,6 @@ footer {
   animation-duration: 18s;
 }
 
-/* Position them randomly around the screen */
 .fireflies span:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
 .fireflies span:nth-child(2) { top: 30%; left: 80%; animation-delay: 2s; }
 .fireflies span:nth-child(3) { top: 70%; left: 10%; animation-delay: 4s; }
@@ -131,14 +122,12 @@ footer {
 .fireflies span:nth-child(9) { top: 90%; left: 70%; animation-delay: 16s; }
 .fireflies span:nth-child(10) { top: 15%; left: 80%; animation-delay: 18s; }
 
-/* Add more random positions for others */
 .fireflies span:nth-child(11) { top: 25%; left: 10%; animation-delay: 3s; }
 .fireflies span:nth-child(12) { top: 60%; left: 90%; animation-delay: 5s; }
 .fireflies span:nth-child(13) { top: 75%; left: 50%; animation-delay: 7s; }
 .fireflies span:nth-child(14) { top: 40%; left: 30%; animation-delay: 9s; }
 .fireflies span:nth-child(15) { top: 85%; left: 20%; animation-delay: 11s; }
 
-/* ==== MOVEMENT (they roam everywhere) ==== */
 @keyframes fly {
   0%   { transform: translate(0, 0) scale(1); opacity: 0.6; }
   20%  { transform: translate(100px, -150px) scale(1.2); opacity: 1; }
@@ -148,9 +137,9 @@ footer {
   100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
 }
 
-/* ==== GLOW ==== */
 @keyframes glow {
   from { box-shadow: 0 0 8px 3px rgba(255,255,180,0.6); }
   to   { box-shadow: 0 0 20px 6px rgba(255,255,200,1); }
 }
+
 
