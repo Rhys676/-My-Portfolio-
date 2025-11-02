@@ -1,0 +1,155 @@
+/* ==== GLOBAL STYLE ==== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: url("images/grave-of-the-fireflies-outside-pond-at-night.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ==== HEADER ==== */
+header {
+  text-align: center;
+  padding: 100px 20px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ffeb70;
+  text-shadow: 0 0 15px rgba(255, 255, 150, 0.8);
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 150, 0.6);
+}
+
+/* ==== BOX ==== */
+.box {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  padding: 25px 40px;
+  margin: 30px auto;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+h2 {
+  color: #ffeb70;
+  text-shadow: 0 0 8px rgba(255, 255, 180, 0.8);
+  margin-bottom: 15px;
+}
+
+/* ==== INSPIRATION ==== */
+.inspiration-section {
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 50px;
+  color: #fff;
+  z-index: 2;
+  position: relative;
+}
+
+.inspiration-section a {
+  color: #ffeb70;
+  text-decoration: none;
+}
+
+/* ==== CONTACT ==== */
+.contact a {
+  color: #ffeb70;
+  text-decoration: none;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* ==== FIREFLIES ==== */
+.fireflies {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.fireflies span {
+  position: absolute;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, rgba(255,255,180,1) 40%, transparent 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 15px 5px rgba(255,255,180,0.8);
+  opacity: 0.8;
+  animation: fly 20s linear infinite, glow 2s ease-in-out infinite alternate;
+}
+
+/* === RANDOMIZE POSITION + SPEED === */
+.fireflies span:nth-child(odd) {
+  width: 8px;
+  height: 8px;
+  animation-duration: 25s;
+}
+
+.fireflies span:nth-child(even) {
+  width: 5px;
+  height: 5px;
+  animation-duration: 18s;
+}
+
+/* Position them randomly around the screen */
+.fireflies span:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.fireflies span:nth-child(2) { top: 30%; left: 80%; animation-delay: 2s; }
+.fireflies span:nth-child(3) { top: 70%; left: 10%; animation-delay: 4s; }
+.fireflies span:nth-child(4) { top: 50%; left: 60%; animation-delay: 6s; }
+.fireflies span:nth-child(5) { top: 80%; left: 40%; animation-delay: 8s; }
+.fireflies span:nth-child(6) { top: 20%; left: 90%; animation-delay: 10s; }
+.fireflies span:nth-child(7) { top: 60%; left: 30%; animation-delay: 12s; }
+.fireflies span:nth-child(8) { top: 40%; left: 50%; animation-delay: 14s; }
+.fireflies span:nth-child(9) { top: 90%; left: 70%; animation-delay: 16s; }
+.fireflies span:nth-child(10) { top: 15%; left: 80%; animation-delay: 18s; }
+
+/* Add more random positions for others */
+.fireflies span:nth-child(11) { top: 25%; left: 10%; animation-delay: 3s; }
+.fireflies span:nth-child(12) { top: 60%; left: 90%; animation-delay: 5s; }
+.fireflies span:nth-child(13) { top: 75%; left: 50%; animation-delay: 7s; }
+.fireflies span:nth-child(14) { top: 40%; left: 30%; animation-delay: 9s; }
+.fireflies span:nth-child(15) { top: 85%; left: 20%; animation-delay: 11s; }
+
+/* ==== MOVEMENT (they roam everywhere) ==== */
+@keyframes fly {
+  0%   { transform: translate(0, 0) scale(1); opacity: 0.6; }
+  20%  { transform: translate(100px, -150px) scale(1.2); opacity: 1; }
+  40%  { transform: translate(-120px, 100px) scale(0.9); opacity: 0.8; }
+  60%  { transform: translate(200px, 50px) scale(1.1); opacity: 1; }
+  80%  { transform: translate(-150px, -100px) scale(0.8); opacity: 0.7; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+}
+
+/* ==== GLOW ==== */
+@keyframes glow {
+  from { box-shadow: 0 0 8px 3px rgba(255,255,180,0.6); }
+  to   { box-shadow: 0 0 20px 6px rgba(255,255,200,1); }
+}
