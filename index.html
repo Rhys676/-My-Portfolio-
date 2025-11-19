@@ -15,26 +15,38 @@
 
   <header>
     <h1>Welcome to My Portfolio</h1>
-    <img src="Images/profile.jpg" alt="Profile Picture" class="profile-pic">
+    <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
   </header>
 
   <section class="intro box">
     <p>
-      Hey there! I'm someone who loves learning new things—whether it's tech, music, or nature.
-      I enjoy spending my time <strong>singing, gaming, listening to music, watching paranormal investigations,</strong>
-      and <strong>exploring nature</strong>. I find beauty in the calm moments of life and creativity.
+      Hello, and thank you for taking the time to learn more about me. I am an individual who values 
+      continuous learning and personal growth, particularly in areas such as technology, music, and the natural environment. 
+      <strong>My interests include singing, gaming, listening to music, watching paranormal investigations, and exploring nature.</strong>
+      These activities allow me to express creativity, unwind, and stay connected to both the real and imaginative aspects of life.
+
+      I find great appreciation in calm and reflective moments—those instances that encourage thoughtfulness and inspire new ideas.
+      Whether I am immersed in a captivating melody, engaged in a challenging game, or observing the world with curiosity, 
+      I strive to embrace experiences that foster insight, creativity, and a deeper understanding of the world around me. 
+      I value authenticity, meaningful connections, and the pursuit of knowledge, all of which guide me in both my personal and 
+      creative endeavors.
     </p>
   </section>
 
   <section class="hobbies box">
     <h2>My Hobbies & Interests</h2>
     <ul>
-      <li>🎮 Gaming</li>
-      <li>🎧 Listening to Music</li>
-      <li>📷 Taking Pictures of the Environment</li>
-      <li>🌿 Exploring Nature</li>
+        <li onclick="playMusic('BIGBANG - LOSER MV.mp3')">🎧 Listening to Music</li>
+        <li onclick="showImage('environment.jpg')">📸 Taking Pictures of the Environment</li>
+        <li onclick="showImage('nature.jpg')">🌿 Exploring Nature</li>
+        <li onclick="showImage('taekwondo.jpg')">🥋 Taekwondo</li>
     </ul>
-  </section>
+</section>
+
+<div id="preview"></div>
+
+<audio id="audioPlayer"></audio>
+
 
   <section class="inspiration-section">
     <p>
@@ -50,14 +62,40 @@
     <p>Email: <a href="mailto:crhysdatul@gmail.com">crhysdatul@gmail.com</a></p>
     <p>Facebook: <a href="https://www.facebook.com/profile.php?id=100085666807697" target="_blank">facebook.com/rhysdatul</a></p>
     <p>YouTube: <a href="https://www.youtube.com/@RhysPawns" target="_blank">youtube.com/Rhyspawn Shorts</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/rhyspawns/?hl=en" target="_blank">Instagram.com/Rhyspawns</a></p>
   </section>
 
   <footer>
     <p>© 2025 My Portfolio. All Rights Reserved.</p>
   </footer>
 
+<script>
+const audio = document.getElementById("audioPlayer");
+
+function stopAudio() {
+    audio.pause();
+    audio.currentTime = 0;
+}
+
+function showImage(imageFile) {
+    stopAudio(); 
+    document.getElementById("preview").innerHTML =
+        `<img src="${imageFile}" alt="Hobby Image">`;
+}
+
+function playMusic(musicFile) {
+    stopAudio(); 
+    audio.src = musicFile;
+    audio.play();
+    document.getElementById("preview").innerHTML =
+        `<p style="color:white; font-size:18px;">🎵 Now Playing...</p>`;
+}
+</script>
+
 </body>
 </html>
+
+
 
 
 
