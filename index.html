@@ -28,8 +28,8 @@
       I find great appreciation in calm and reflective moments—those instances that encourage thoughtfulness and inspire new ideas.
       Whether I am immersed in a captivating melody, engaged in a challenging game, or observing the world with curiosity, 
       I strive to embrace experiences that foster insight, creativity, and a deeper understanding of the world around me. 
-      I value authenticity, meaningful connections, and the pursuit of knowledge, all of which guide me in both my personal and 
-      creative endeavors.
+      <strong>I value authenticity, meaningful connections, and the pursuit of knowledge, all of which guide me in both my personal and 
+      creative endeavors.</strong>
     </p>
   </section>
 
@@ -39,7 +39,7 @@
         <li onclick="playMusic('Music/BIGBANG - LOSER MV.mp3')">🎧 Listening to Music</li>
         <li onclick="showImage('Images/environment.jpg')">📸 Taking Pictures of the Environment</li>
         <li onclick="showImage('Images/nature.jpg')">🌿 Exploring Nature</li>
-        <li onclick="showImage('Images/taekwondo.jpg')">🥋 Taekwondo</li>
+        <li onclick="showVideo('Images/taekwondo.mp4')">🥋 Taekwondo</li>
     </ul>
 </section>
 
@@ -83,6 +83,12 @@ function showImage(imageFile) {
         `<img src="${imageFile}" alt="Hobby Image">`;
 }
 
+function showVideo(videoFile) {
+    stopAudio();
+    document.getElementById("preview").innerHTML =
+        `<video src="${videoFile}" controls autoplay style="max-width:100%; border-radius:12px;"></video>`;
+}
+
 function playMusic(musicFile) {
     stopAudio(); 
     audio.src = musicFile;
@@ -94,10 +100,6 @@ function playMusic(musicFile) {
 
 </body>
 </html>
-
-
-
-
 
 
 
